@@ -296,10 +296,10 @@ Mississippi State University, Department of Geosciences.
 ## Contact
 
 For questions or collaborations:
-- **Author:** [Your Name]
+- **Author:** Hafez Ahmad
 - **Institution:** Mississippi State University
-- **Email:** [your.email@msstate.edu]
-- **GitHub:** [your-github-username]
+- **Email:** [ha626@msstate.edu]
+- **GitHub:** [hafez-ahmad]
 
 ## License
 
