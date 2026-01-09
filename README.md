@@ -1,3 +1,56 @@
+# Environment Set Up
+
+## Prerequisites
+- Python 3.11.5 installed on your system
+- pip package manager
+
+## Create Virtual Environment
+
+### Step 1: Create Virtual Environment
+```bash
+python -m venv hypoxia_env
+```
+
+### Step 2: Activate Virtual Environment
+**Windows:**
+```bash
+hypoxia_env\Scripts\activate
+```
+
+**Mac/Linux:**
+```bash
+source hypoxia_env/bin/activate
+```
+
+### Step 3: Verify Python Version
+```bash
+python --version
+```
+Should show: Python 3.11.5
+
+### Step 4: Upgrade pip
+```bash
+python -m pip install --upgrade pip
+```
+
+### Step 5: Install Required Packages
+```bash
+pip install pandas numpy scikit-learn matplotlib seaborn jupyter scipy xarray rasterio ee geemap
+```
+
+### Step 6: Optional Geospatial Packages (uncomment in code if needed)
+```bash
+pip install geopandas gdal arcpy
+```
+
+### Step 7: Verify Installation
+```bash
+python -c "import pandas, numpy, xarray, rasterio, ee, geemap; print('All packages installed successfully!')"
+```
+
+---
+
+# Table of Contents
 
 # Hypoxia Prediction in the Gulf of Mexico Using Machine Learning
 
@@ -210,39 +263,6 @@ pip install numpy pandas matplotlib seaborn scikit-learn xgboost shap rasterio g
 ### 1. Run the Notebook
 Open `Hypoxia Prediction.ipynb` in Jupyter/VSCode and execute cells sequentially.
 
-### 2. Load Pre-Trained Model
-```python
-import joblib
-model = joblib.load('models/best_model.pkl')
-scaler = joblib.load('models/scaler.pkl')
-```
-
-### 3. Make Predictions on New Data
-```python
-import pandas as pd
-
-# Prepare feature array (14 bands)
-new_data = pd.DataFrame({
-    'chlor_a': [...], 'nflh': [...], 'poc': [...], 'sst': [...],
-    'Rrs_412': [...], 'Rrs_443': [...], 'Rrs_469': [...],
-    'Rrs_488': [...], 'Rrs_531': [...], 'Rrs_547': [...],
-    'Rrs_555': [...], 'Rrs_645': [...], 'Rrs_667': [...],
-    'Rrs_678': [...]
-})
-
-# Normalize and predict
-new_data_scaled = scaler.transform(new_data)
-predictions = model.predict(new_data_scaled)
-probabilities = model.predict_proba(new_data_scaled)[:, 1]
-```
-
-### 4. Analyze Temporal Trends
-```python
-import pandas as pd
-df_area = pd.read_csv('data/Predicted rast/area.csv')
-df_area['date'] = pd.to_datetime(df_area['file'])
-df_area.plot(x='date', y='class_1_area_sqkm', title='Hypoxia Zone Extent Over Time')
-```
 
 ## Key Results
 
@@ -289,7 +309,7 @@ df_area.plot(x='date', y='class_1_area_sqkm', title='Hypoxia Zone Extent Over Ti
 If you use this pipeline, please cite:
 
 ```
-[Author Name]. (2026). Hypoxia Prediction in the Gulf of Mexico Using Machine Learning.
+[Ahmad]. (2026). Hypoxia Prediction in the Gulf of Mexico Using Machine Learning.
 Mississippi State University, Department of Geosciences.
 ```
 
@@ -298,8 +318,8 @@ Mississippi State University, Department of Geosciences.
 For questions or collaborations:
 - **Author:** Hafez Ahmad
 - **Institution:** Mississippi State University
-- **Email:** [ha626@msstate.edu]
-- **GitHub:** [hafez-ahmad]
+- **Email:** ha626@msstate.edu
+- **GitHub:** hafez-ahmad
 
 ## License
 
