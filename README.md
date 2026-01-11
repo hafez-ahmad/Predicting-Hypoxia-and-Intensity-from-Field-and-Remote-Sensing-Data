@@ -309,8 +309,7 @@ Open `Hypoxia Prediction.ipynb` in Jupyter/VSCode and execute cells sequentially
 If you use this pipeline, please cite:
 
 ```
-[Ahmad]. (2026). Hypoxia Prediction in the Gulf of Mexico Using Machine Learning.
-Mississippi State University, Department of Geosciences.
+Ahmad, H., Jose, F., Dash, P., Shoemaker, D. J., & Jhara, S. I. (2025). Hypoxia in the Gulf of Mexico: A machine learning approach for evaluation and prediction. Regional Studies in Marine Science, 104363.
 ```
 
 ## Contact
